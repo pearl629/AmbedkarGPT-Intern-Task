@@ -33,7 +33,7 @@ This project demonstrates a functional RAG pipeline that satisfies all assignmen
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/AmbedkarGPT-Intern-Task.git
+git clone https://github.com/pearl629/AmbedkarGPT-Intern-Task
 cd AmbedkarGPT-Intern-Task
  
  
@@ -59,28 +59,15 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-This will install:
-- langchain-community
-- langchain-core
-- langchain-chroma
-- langchain-huggingface
-- langchain-ollama
-- langchain-text-splitters
-- chromadb
-- sentence-transformers
-- langgraph
-- And all their dependencies
+ 
 
 ## Usage
 
 ### Running the System
 
-1. **Ensure Ollama is running** (it usually runs in the background after installation)
+1. **Ensure Ollama is running** 
    
-   You can verify by running:
-   ```bash
-   ollama list
-   ```
+ 
 
 2. **Activate your virtual environment** (if not already activated):
    ```bash
