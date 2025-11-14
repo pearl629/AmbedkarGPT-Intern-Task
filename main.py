@@ -1,13 +1,11 @@
-"""
-AmbedkarGPT - A Simple RAG Q&A System
-This system answers questions based on Dr. B.R. Ambedkar's speech text.
-"""
+ 
 from langchain_text_splitters import CharacterTextSplitter
 from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_ollama import ChatOllama
 from langchain_community.document_loaders import TextLoader
 from langchain_core.tools import tool
+import os
 from langgraph.checkpoint.memory import MemorySaver
 from langgraph.prebuilt import create_react_agent
 
@@ -15,16 +13,21 @@ from langgraph.prebuilt import create_react_agent
 db = None
 
 def initialize_rag_system():
-    """Load text, split into chunks, embed & store in Chroma DB."""
+    
     print("Initializing system...")
     
     global db
-    
+
+    # Get the directory where this script is located
+    base_dir = Path(__file__).parent
+
+    # Build path to speech.txt
+    speech_path = base_dir / "speech.txt"
+
     # Load text
-    loader = TextLoader("C:/Users/Administrator/Desktop/rag/speech.txt")
+    loader = TextLoader(str(speech_path))
     documents = loader.load()
     text_content = documents[0].page_content
-    
     # Split into chunks
     splitter = CharacterTextSplitter(
         separator="\n",
