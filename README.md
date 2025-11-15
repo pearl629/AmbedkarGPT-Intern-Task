@@ -135,13 +135,8 @@ AmbedkarGPT-Intern-Task/
 - **LangGraph**: Manages agent workflow with persistent memory using MemorySaver
 - **React Agent**: Tool-calling agent that can use the RAG retrieval tool dynamically
  
- ```
-## License
+ 
+ 
 
-This project is created for educational purposes as part of an internship assignment.
-
-## Author
-
-[Your pearl]  
-[Your pearlmanilal750@gmail.com]  
-[Date: November 14, 2025]
+ 
+ 
